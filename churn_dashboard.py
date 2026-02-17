@@ -11,7 +11,7 @@ st.set_page_config(page_title="Churn Analytics Dashboard", layout="wide")
 # -----------------------
 # Load Files
 # -----------------------
-model = joblib.load("Customer_Churn_model.pkl")
+model = joblib.load("model_compressed.pkl")
 label_encoders = joblib.load("encoded_columns.pkl")
 model_columns = joblib.load("training_columns.pkl")
 
@@ -114,3 +114,4 @@ if predict_button:
         ax2.invert_yaxis()
         ax2.set_title("Top 10 Important Features")
         st.pyplot(fig2)
+
